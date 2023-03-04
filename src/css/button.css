@@ -1,0 +1,91 @@
+/* color  button */
+.button-1st-default {
+  @apply !bg-primarys-6 !text-whites-6 hover:!bg-primarys-7;
+}
+.button-1st-disable {
+  @apply !bg-primarys-4 !text-whites-6;
+}
+.button-1st-loading {
+  @apply !bg-primarys-4 !text-whites-6;
+}
+
+.button-2nd-default {
+  @apply !bg-primarys-1 !text-primarys-6 hover:!text-primarys-7;
+}
+.button-2nd-disable {
+  @apply !bg-primarys-1 !text-primarys-4;
+}
+.button-2nd-loading {
+  @apply !bg-primarys-1 !text-primarys-4;
+}
+
+.button-1st_danger-default {
+  @apply !bg-reds-6 !text-whites-6 hover:!bg-reds-7;
+}
+.button-1st_danger-disable {
+  @apply !bg-reds-3 !text-whites-6;
+}
+.button-1st_danger-loading {
+  @apply !bg-reds-3 !text-whites-6;
+}
+
+.button-2nd_danger-default {
+  @apply !bg-reds-1 !text-reds-6 hover:!text-reds-7;
+}
+.button-2nd_danger-disable {
+  @apply !bg-reds-1 !text-reds-3;
+}
+.button-2nd_danger-loading {
+  @apply !bg-reds-1 !text-reds-4;
+}
+
+.button-3rd-default {
+  @apply !bg-inks-1 !text-inks-5  hover:!text-inks-6;
+}
+.button-3rd-disable {
+  @apply !bg-inks-1 !text-inks-3;
+}
+.button-3rd-loading {
+  @apply !bg-inks-1 !text-inks-4;
+}
+
+/* size button */
+.button-size-light {
+  @apply text-sm font-normal py-[6px] px-3 leading-5;
+}
+.button-size-normal {
+  @apply text-base font-medium py-1 px-3  leading-6;
+}
+.button-size-medium {
+  @apply text-base font-medium py-2 px-3 leading-6;
+}
+.button-size-semibold {
+  @apply text-base font-medium p-3  leading-6;
+}
+.button-size-bold {
+  @apply text-base font-medium py-4 px-3 leading-6;
+}
+
+.loader {
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Loading */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}

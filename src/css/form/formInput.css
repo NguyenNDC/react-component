@@ -1,0 +1,16 @@
+@layer components {
+  .btn-reset-value {
+    @apply text-inks-5 cursor-pointer text-sm w-4 h-4 bg-inks-2 before:absolute before:translate-x-[0.1875rem] before:translate-y-[0.0625rem] rounded-full;
+  }
+
+  .form-input-small {
+    @apply px-4 py-2 h-[2.5rem];
+  }
+  .form-input-medium {
+    @apply px-4 py-3 h-[3rem];
+  }
+
+  .form-input-large {
+    @apply px-4 py-4 h-[3.5rem];
+  }
+}

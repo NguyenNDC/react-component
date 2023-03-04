@@ -1,0 +1,43 @@
+@layer components {
+  .ctn-phone-number {
+    @apply relative w-full;
+  }
+
+  .phone-header-normal {
+    @apply flex items-center rounded-lg  px-4 py-2  bg-whites-6 border border-inks-2 focus-within:border-primarys-6  w-full;
+  }
+
+  .phone-header-error {
+    @apply flex items-center rounded-lg  px-4 py-2  bg-whites-6 border border-reds-6 focus-within:border-reds-6  w-full;
+  }
+
+  .phone-header-disable {
+    @apply flex items-center rounded-lg  px-4 py-2 bg-inks-2 w-full;
+  }
+
+  .btn-search {
+    @apply flex items-center cursor-pointer;
+  }
+
+  .flag {
+    @apply inline-block rounded w-full h-full;
+  }
+
+  .text-prefix {
+    @apply text-inks-6 text-base leading-6 font-normal ml-[2px];
+  }
+
+  .line-phone {
+    @apply bg-inks-3 h-[20px] w-[1px] mr-2 ml-[2px];
+  }
+
+  .phone-body {
+    @apply absolute bg-whites-6 rounded-lg p-1  w-full mt-1;
+  }
+  .list-phone {
+    @apply h-full max-h-[208px] overflow-hidden overflow-y-auto;
+  }
+  .phone-items {
+    @apply h-10 px-3 flex items-center justify-between rounded-lg text-inks-6 text-sm leading-5 font-normal w-full bg-whites-6 whitespace-normal hover:bg-inks-1 cursor-pointer;
+  }
+}

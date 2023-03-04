@@ -1,0 +1,19 @@
+@layer components {
+  .wrap {
+    position: relative;
+    display: inline-block;
+  }
+
+  .wrap:after {
+    content: '';
+    border-top: 1px solid #999999;
+    width: 16px;
+    transform: rotate(-45deg);
+    background: transparent;
+    position: absolute;
+    right: 4px;
+    bottom: 17px;
+    pointer-events: none;
+    border-radius: 25%;
+  }
+}

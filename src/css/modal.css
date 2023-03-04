@@ -1,0 +1,36 @@
+.modal {
+  @apply fixed top-0 left-0 w-full h-full overflow-x-hidden overflow-y-auto outline-0  z-[1055];
+}
+.modal-dialog {
+  @apply relative w-auto md:max-w-[500px] mx-auto m-7;
+}
+
+.modal-content {
+  @apply relative flex flex-col w-full outline-0 bg-whites-6 border-0 rounded-xl;
+}
+
+.modal-header {
+  @apply flex shrink-0 items-start justify-between  py-4 px-6 relative;
+}
+.modal-header .btn-close {
+  @apply p-2 ml-auto h-full;
+}
+.modal-title {
+  @apply leading-5 font-bold text-lg;
+}
+.modal-body {
+  @apply relative shrink grow basis-auto py-4 px-6;
+}
+.modal-footer {
+  @apply py-4 px-6;
+}
+.modal-backdrop {
+  @apply bg-blacks/25 w-screen fixed top-0 left-0  z-[1050]  h-screen;
+}
+.fade {
+  @apply transition-all;
+}
+
+body.modal-open {
+  @apply !overflow-y-auto;
+}

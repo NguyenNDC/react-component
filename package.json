@@ -1,0 +1,130 @@
+{
+  "version": "0.2.5",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "format": "prettier --write .",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "classnames": "^2.3.2",
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "cuong-components",
+  "author": "cuongND",
+  "module": "dist/tsdx-demo-component.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/tsdx-demo-component.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/tsdx-demo-component.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addons": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "@types/cleave.js": "^1.4.7",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-transition-group": "^4.4.5",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "5.36.2",
+    "@typescript-eslint/parser": "5.36.2",
+    "autoprefixer": "^9",
+    "babel-loader": "^9.1.2",
+    "classnames": "^2.3.2",
+    "eslint": "8.2.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-next": "13.1.6",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-cypress": "2.12.1",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jest": "27.0.2",
+    "eslint-plugin-jest-dom": "4.0.2",
+    "eslint-plugin-jest-formatting": "3.1.0",
+    "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.31.7",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-simple-import-sort": "8.0.0",
+    "eslint-plugin-tailwindcss": "3.6.1",
+    "eslint-plugin-testing-library": "5.6.2",
+    "eslint-plugin-unused-imports": "2.0.0",
+    "husky": "^8.0.3",
+    "identity-obj-proxy": "^3.0.0",
+    "postcss": "^8.1.9",
+    "postcss-import": "^12.0.0",
+    "postcss-loader": "4.1.0",
+    "postcss-nesting": "^11.2.1",
+    "prettier": "2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "size-limit": "^8.2.4",
+    "styled-components": "^5.3.8",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "@twind/core": "^1.1.3",
+    "@twind/with-react": "^1.1.3",
+    "button.css": "^1.0.1",
+    "cleave.js": "^1.6.0",
+    "dropdown.css": "^0.0.1",
+    "form": "^0.2.4",
+    "icons": "^1.0.0",
+    "prop-types": "^15.8.1",
+    "react-popper": "^2.3.0",
+    "react-transition-group": "^4.4.5",
+    "twind": "^1.0.0"
+  }
+}

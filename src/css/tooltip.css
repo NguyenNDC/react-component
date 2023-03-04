@@ -1,0 +1,32 @@
+@layer components {
+  .tooltip {
+    @apply bg-inks-6 text-whites-6 font-normal text-sm leading-5 p-3 rounded-lg max-w-[400px];
+  }
+
+  .tooltip-arrow,
+  .tooltip-arrow::before {
+    @apply absolute w-3 h-3 bg-inks-6;
+  }
+
+  .tooltip-arrow {
+    @apply invisible;
+  }
+
+  .tooltip-arrow::before {
+    @apply visible content-[""] rotate-45;
+  }
+
+  .tooltip.bs-tooltip-top > .tooltip-arrow {
+    @apply -bottom-1;
+  }
+
+  .tooltip.bs-tooltip-bottom > .tooltip-arrow {
+    @apply -top-1;
+  }
+  .tooltip.bs-tooltip-left > .tooltip-arrow {
+    @apply -right-1;
+  }
+  .tooltip.bs-tooltip-right > .tooltip-arrow {
+    @apply -left-1;
+  }
+}

@@ -1,0 +1,31 @@
+@layer components {
+  .ctn-select {
+    @apply relative w-full;
+  }
+  .select-header-normal {
+    @apply relative border bg-whites-6 cursor-pointer border-inks-2 focus:border-primarys-6  focus:shadow-3 px-4 py-2 h-[40px] w-full rounded-lg;
+  }
+
+  .select-header-error {
+    @apply relative border border-reds-6 px-4 py-2 h-[40px] w-full rounded-lg;
+  }
+
+  .select-header-disable {
+    @apply relative border bg-inks-2 px-4 py-2 h-[40px] w-full rounded-lg;
+  }
+
+  .select-header-input {
+    @apply border-none outline-none w-full bg-transparent cursor-pointer;
+  }
+
+  .select-body {
+    @apply bg-whites-6 !w-full rounded-lg p-1 mt-1 !absolute;
+  }
+  .select-list-items {
+    @apply overflow-hidden overflow-y-auto h-full max-h-[208px]  mt-1;
+  }
+
+  .select-item {
+    @apply h-[40px] px-3 py-2 hover:bg-inks-1 rounded-lg flex items-center justify-between cursor-pointer;
+  }
+}

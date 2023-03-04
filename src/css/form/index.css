@@ -1,0 +1,44 @@
+@import 'formInput.css';
+@import 'formTextArea.css';
+@import 'formMultiTags.css';
+@import 'formSelect.css';
+@import 'formChecked.css';
+@import 'formMultiSelect.css';
+
+.form-feedback-invalid {
+  @apply block mt-1 mx-4 text-sm text-reds-6 font-normal leading-5;
+}
+
+.form-feedback-valid {
+  @apply mt-1 mx-4 text-sm text-inks-5 font-normal leading-5;
+}
+
+.form-input-label {
+  @apply mb-2 block font-normal text-base leading-6 text-inks-6;
+}
+
+.form-normal {
+  @apply border bg-whites-6 border-inks-2 focus-within:border-primarys-6;
+}
+.form-disable {
+  @apply bg-inks-2;
+}
+
+.form-error {
+  @apply border bg-whites-6 border-reds-6 focus-within:border-reds-6;
+}
+
+::-webkit-resizer {
+  display: none;
+}
+
+.pull-tab {
+  border-top: 1px solid #999999;
+  width: 10px;
+  transform: rotate(-45deg);
+  position: absolute;
+  bottom: 14px;
+  right: 4px;
+  pointer-events: none;
+  border-radius: 25%;
+}
