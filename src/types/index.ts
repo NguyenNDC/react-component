@@ -17,3 +17,5 @@ export type Placements =
   | undefined;
 
 export type Triggers = 'hover' | 'focus' | 'click';
+
+export type ColorToast = 'success' | 'warning' | 'error' | 'notification';

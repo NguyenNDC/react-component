@@ -4,4 +4,7 @@ export * from './button';
 export * from './dropdown';
 export * from './form';
 export * from './link';
+export * from './modal';
+export * from './phoneNumber';
+export * from './toast';
 export * from './tooltip';

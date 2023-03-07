@@ -9,7 +9,6 @@ export interface CLinkProps
   component?: string | ElementType;
   disabled?: boolean;
   href?: string;
-  isLoading?: JSX.Element;
 }
 
 export const CLink = forwardRef<
@@ -23,7 +22,6 @@ export const CLink = forwardRef<
       className,
       component: Component = 'a',
       disabled,
-      isLoading,
       ...rest
     },
     ref
@@ -52,7 +50,6 @@ export const CLink = forwardRef<
         {...rest}
         ref={ref}
       >
-        {isLoading}
         {children}
       </Component>
     );

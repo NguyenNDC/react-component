@@ -2,35 +2,34 @@ import React from 'react';
 
 interface Props {
   className?: string;
-  onClick?: () => void;
   color?: string;
   size?: string;
 }
-export const Close = ({
+export const Success = ({
   className,
-  onClick,
-  color = 'white',
+  color = '#389E0D',
   size = '24',
 }: Props) => {
   return (
     <svg
       className={className}
-      onClick={onClick}
       width={size}
       height={size}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        d="M8 8L16 16"
+      <circle
+        cx="12.0001"
+        cy="12.0001"
+        r="9.00375"
         stroke={color}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M16 8L8 16"
+        d="M8.44263 12.3392L10.6105 14.5071L10.5965 14.4931L15.4876 9.60205"
         stroke={color}
         strokeWidth="1.5"
         strokeLinecap="round"

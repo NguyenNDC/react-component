@@ -1,22 +1,27 @@
 import classNames from 'classnames';
 import type { HTMLAttributes } from 'react';
-import React, { forwardRef } from 'react';
-
-import { CToastClose } from './CToastClose';
+import React, { Children, forwardRef } from 'react';
 
 export interface CToastHeaderProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   className?: string;
-  closeButton?: boolean;
 }
 
 export const CToastHeader = forwardRef<HTMLDivElement, CToastHeaderProps>(
-  ({ children, className, closeButton, ...rest }, ref) => {
-    const _className = classNames('toast-header', className);
+  ({ children, className, ...rest }, ref) => {
+    const _className = classNames(
+      className,
+      'flex justify-between items-start mb-1'
+    );
     return (
       <div className={_className} {...rest} ref={ref}>
-        {children}
-        {closeButton && <CToastClose />}
+        {Children.count(children) > 1 ? (
+          <div>{children}</div>
+        ) : (
+          <div className="text-inks-6 text-base font-medium leading-6">
+            {children}
+          </div>
+        )}
       </div>
     );
   }

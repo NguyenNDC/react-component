@@ -10,6 +10,9 @@ import React, {
 import { Transition } from 'react-transition-group';
 
 import { useForkedRef } from '../../hooks';
+import type { ColorToast } from '../../types';
+import { CToastClose } from './CToastClose';
+import { CToastIcons } from './CToastIcons';
 
 export interface CToastProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
@@ -22,14 +25,25 @@ export interface CToastProps
   onClose?: (index: number | null) => void;
   onShow?: (index: number | null) => void;
   visible?: boolean;
+  color?: ColorToast;
+  closeButton?: boolean;
+  closeIcons?: boolean;
 }
 
 interface ContextProps extends CToastProps {
   visible?: boolean;
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  color?: ColorToast;
 }
 
 export const CToastContext = createContext({} as ContextProps);
+
+const colors = {
+  success: 'border border-greens-6 bg-greens-1',
+  warning: 'border border-oranges-6 bg-oranges-1',
+  error: 'border border-reds-6 bg-reds-1',
+  notification: 'border border-blues-6 bg-blues-1',
+};
 
 export const CToast = forwardRef<HTMLDivElement, CToastProps>(
   (
@@ -38,13 +52,15 @@ export const CToast = forwardRef<HTMLDivElement, CToastProps>(
       animation = true,
       autohide = true,
       className,
-      color,
+      color = 'success',
       delay = 3000,
       index,
       key,
       visible = false,
       onClose,
       onShow,
+      closeButton = false,
+      closeIcons = true,
       ...rest
     },
     ref
@@ -74,14 +90,12 @@ export const CToast = forwardRef<HTMLDivElement, CToastProps>(
     }, [_visible]);
 
     const _className = classNames(
-      'border-solid border-1 border-[#0000152d] rounded-[0.375rem] mt-[20px] bg-whites-6',
-      'shadow-[0_0.5rem_1rem_rgba(0,0,21,.15)] text-[unset] text-[0.875rem] max-w-[100%] pointer-events-auto',
+      className,
+      'w-full max-w-[520px] p-4 rounded-xl flex justify-between items-start',
+      colors[color],
       {
         fade: animation,
-        [`bg-[${color}]`]: color,
-        'border-[color]': color,
-      },
-      className
+      }
     );
 
     const getTransitionClass = (state: string) => {
@@ -121,7 +135,13 @@ export const CToast = forwardRef<HTMLDivElement, CToastProps>(
                 key={key}
                 ref={forkedRef}
               >
-                {children}
+                <div className="flex items-start">
+                  {closeIcons && <CToastIcons className="mr-2" color={color} />}
+                  <div>{children}</div>
+                </div>
+                {closeButton && (
+                  <CToastClose onClick={() => setVisible(false)} />
+                )}
               </div>
             </CToastContext.Provider>
           );

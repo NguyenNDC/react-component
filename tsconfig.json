@@ -17,14 +17,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "baseUrl": ".",
-    "paths": {
-      "@icons/*": ["src/icons/*"],
-      "@utils/*": ["src/utils/*"],
-      "@types/*": ["src/types/*"],
-      "@components/*": ["src/components/*"],
-      "@css/*": ["src/css/*"]
-    }
+    "noEmit": true
   }
 }

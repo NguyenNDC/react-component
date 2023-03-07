@@ -44,7 +44,6 @@ export const CToaster = forwardRef<HTMLDivElement, CToasterProps>(
     }, [push]);
 
     const _className = classNames(
-      'border-solid border-1 border-[#0000152d] rounded-[0.375rem] m-width-full absolute z-[1090] p-3 right-[20px]',
       {
         'position-fixed': placement,
         'top-[30px]': placement && placement.includes('top'),

@@ -3,8 +3,8 @@ import type { ElementType, FC, HTMLAttributes } from 'react';
 import React, { useContext, useEffect, useRef } from 'react';
 import type { PopperChildrenProps } from 'react-popper';
 import { Popper } from 'react-popper';
-import type { Placements } from 'src/types';
 
+import type { Placements } from '../../types';
 import { CDropdownContext } from './CDropdown';
 
 export interface CDropdownMenuProps

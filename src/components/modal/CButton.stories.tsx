@@ -19,7 +19,7 @@ const Template: ComponentStory<typeof CModal> = () => {
     <>
       <CButton onClick={() => setVisible(!visible)}>Launch demo modal</CButton>
       <CModal visible={visible} onClose={() => setVisible(false)}>
-        <CModalHeader onClose={() => setVisible(false)}>
+        <CModalHeader>
           <CModalTitle>Modal title</CModalTitle>
         </CModalHeader>
         <CModalBody>Woohoo, reading this text in a modal!</CModalBody>
