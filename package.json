@@ -1,5 +1,5 @@
 {
-  "version": "0.2.5",
+  "version": "0.2.6",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -41,16 +41,7 @@
   "name": "cuong-components",
   "author": "cuongND",
   "module": "dist/tsdx-demo-component.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/tsdx-demo-component.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/tsdx-demo-component.esm.js",
-      "limit": "10 KB"
-    }
-  ],
+  "size-limit": [],
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@size-limit/preset-small-lib": "^8.2.4",
