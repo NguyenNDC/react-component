@@ -1,11 +1,10 @@
 {
-  "version": "0.2.6",
+  "version": "0.2.7",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=10"
@@ -106,16 +105,8 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
-    "@twind/core": "^1.1.3",
-    "@twind/with-react": "^1.1.3",
-    "button.css": "^1.0.1",
     "cleave.js": "^1.6.0",
-    "dropdown.css": "^0.0.1",
-    "form": "^0.2.4",
-    "icons": "^1.0.0",
-    "prop-types": "^15.8.1",
     "react-popper": "^2.3.0",
-    "react-transition-group": "^4.4.5",
-    "twind": "^1.0.0"
+    "react-transition-group": "^4.4.5"
   }
 }
